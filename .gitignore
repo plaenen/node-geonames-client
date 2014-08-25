@@ -27,4 +27,8 @@ node_modules
 # Webstorm
 .idea
 
+# Ignore My private keys settings for start-up params
 env.json
+
+# Ignore Test coverage reports
+.coverage
