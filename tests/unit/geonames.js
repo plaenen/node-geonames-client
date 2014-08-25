@@ -28,10 +28,23 @@ describe('Geonames API ', function () {
 
     it('It should be possible to find place "Beringen" using gps coordinates', function (done) {
         var lat = 51.05,
-            long = 5.21,
+            lng = 5.21,
             radius = 10,
             maxRows= 5;
-        geonames.findNearbyPostalCodes(lat,long,radius,maxRows,function(err,res){
+        geonames.findNearbyPostalCodesByGpsCoordinates(lat,lng,radius,maxRows,function(err,res){
+            assert.equal(err, null);
+            assert.equal(res[0].postalCode,'3580');
+            console.log(res);
+            done();
+        });
+    });
+
+    it('It should be possible to find surrounding postalCodes for "3580" using postalCode and Country', function (done) {
+        var postalCode = '3580',
+            countryCode = 'BE',
+            radius = 10,
+            maxRows= 5;
+        geonames.findNearbyPostalCodesByPostCode(postalCode,countryCode,radius,maxRows,function(err,res){
             assert.equal(err, null);
             assert.equal(res[0].postalCode,'3580');
             console.log(res);
@@ -43,6 +56,21 @@ describe('Geonames API ', function () {
         geonames.postalCodeCountryInfo(function(err,res){
             assert.equal(err, null);
             assert.equal(res[0].countryCode,'AD');
+            console.log(res);
+            done();
+        });
+    });
+
+    it('It should be possible to get the closest big city nearby lat = 51.05, lng = 5.21 (Beringen Belgium)', function (done) {
+        var lat = 51.05,
+            lng = 5.21,
+            radius = 100,
+            localCountry = true,
+            cities = 'cities1000',
+            maxRows= 5;
+        geonames.findNearbyPlaceName(lat,lng,radius,localCountry,cities,function(err,res){
+            assert.equal(err, null);
+            assert.equal(res[0].toponymName,'Beringen');
             console.log(res);
             done();
         });
