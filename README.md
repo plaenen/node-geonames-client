@@ -1,7 +1,7 @@
 node-geonames
 =============
 
-Test interacting with geonames and freebase Database using nodejs
+Test interacting with [geonames](www.geonames.org) and [freebase](www.freebase.org) Database using nodejs
 
 #Running the application
 run node bin/server.js --help for parameters
