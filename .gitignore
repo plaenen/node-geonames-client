@@ -32,3 +32,4 @@ env.json
 
 # Ignore Test coverage reports
 .coverage
+temp.txt
