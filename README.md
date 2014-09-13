@@ -7,7 +7,8 @@ create your geonames [user account](http://www.geonames.org/login):
 
 #Tests
 
-Before running your test you've to set the NGN_USERNAME to your geonames.org username, or pass a commandlindline --username={yourusername}
+Before running your test you've to set the NGN_USERNAME environment variable to your geonames.org username,
+or pass a commandline param --username={yourusername}
 
     var opts = {
         'username': argh.argv.username || process.env.NGN_USERNAME
