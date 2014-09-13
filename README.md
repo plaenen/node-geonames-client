@@ -1,9 +1,9 @@
 node-geonames
 =============
 
-Geonames API client for NodeJs
+[Geonames] (http://www.geonames.org) API client for NodeJs
 
-[geonames](http://www.geonames.org)
+create your geonames [user account](http://www.geonames.org/login):
 
 #Tests
 
@@ -12,6 +12,7 @@ Before running your test you've to set the NGN_USERNAME to your geonames.org use
     var opts = {
         'username': argh.argv.username || process.env.NGN_USERNAME
     };
+
 
 
 
