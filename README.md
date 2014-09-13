@@ -3,7 +3,7 @@ node-geonames
 
 Geonames API client for NodeJs
 
-[geonames](www.geonames.org)
+[geonames](http://www.geonames.org)
 
 #Tests
 
