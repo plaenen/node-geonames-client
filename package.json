@@ -1,5 +1,5 @@
 {
-  "name": "node-geonames",
+  "name": "node-geonames-client",
   "version": "0.0.1",
   "description": "node geonames.org client",
   "main": "index.js",
@@ -8,9 +8,9 @@
   },
     "repository": {
         "type": "git",
-        "url": "git://github.com/plaenen/node-geonames"
+        "url": "git://github.com/plaenen/node-geonames-client"
     },
-  "author": "Pascal Laenen",
+  "auth": "Pascal Laenen <plaenen@gmail.com>",
   "dependencies": {
     "argh": "^0.1.3",
     "request": "^2.40.0",

@@ -5,6 +5,10 @@ node-geonames
 
 create your geonames [user account](http://www.geonames.org/login):
 
+#Install
+
+npm install node-geonames-client
+
 #Tests
 
 Before running your test you've to set the NGN_USERNAME environment variable to your geonames.org username,
