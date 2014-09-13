@@ -8,11 +8,8 @@ var argh = require('argh');
 describe('Geonames API ', function () {
     //Parse start-up options and set defaults
     var opts = {
-        'port': +(argh.argv.port || process.env.NGN_PORT || '3000'),
-        'username': argh.argv.username || process.env.NGN_USERNAME,
-        'googleapikey': argh.argv.googleapikey || process.env.NGN_GOOGLEAPIKEY
+        'username': argh.argv.username || process.env.NGN_USERNAME
     };
-
 
     var geonames = require('../../lib/services/geonames.js')({username: opts.username});
 
@@ -151,7 +148,7 @@ describe('Geonames API ', function () {
         });
     });
 
-    it('it should be possible to get the subdevisions for a given lat = 51.05, lng = 5.23 (Beringen Belgium)', function(done){
+    it('it should be possible to get the sub-devisions for a given lat = 51.05, lng = 5.23 (Beringen Belgium)', function(done){
         var options = {
             lat: 51.04954,
             lng: 5.22606,

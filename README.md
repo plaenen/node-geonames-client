@@ -1,13 +1,18 @@
 node-geonames
 =============
 
-Test interacting with [geonames](www.geonames.org) and [freebase](www.freebase.org) Database using nodejs
+Geonames API client for NodeJs
 
-#Running the application
-run node bin/server.js --help for parameters
+[geonames](www.geonames.org)
 
 #Tests
-uses the same parameters as server.js however, they have to be passed as ENV variables.
+
+Before running your test you've to set the NGN_USERNAME to your geonames.org username, or pass a commandlindline --username={yourusername}
+
+    var opts = {
+        'username': argh.argv.username || process.env.NGN_USERNAME
+    };
+
 
 
 
