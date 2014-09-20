@@ -1,6 +1,6 @@
 {
   "name": "node-geonames-client",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "node geonames.org client",
   "main": "index.js",
   "scripts": {
