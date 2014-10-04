@@ -11,7 +11,7 @@ describe('Geonames API ', function () {
         'username': argh.argv.username || process.env.NGN_USERNAME
     };
 
-    var geonames = require('../../lib/services/geonames.js')({username: opts.username});
+    var geonames = require('../../index.js')({username: opts.username});
 
     it('It should be possible to find place "Beringen" with postode 3580 in Belgium', function (done) {
         geonames.postalCodeLookup({postalCode : '3580', countryCode : 'BE', maxRows : 20}, function (err, res) {
